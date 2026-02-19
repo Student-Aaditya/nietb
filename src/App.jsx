@@ -154,11 +154,11 @@ function App() {
 
       {/*2nd Section */}
       <section className="mt-4" id="apply-section" >
-        <div className="flex flex-row  bg-[url('https://www.nietbschool.ac.in/assets/images/applynow-hero-banner.jpeg')]">
+        <div className="flex flex-col lg:flex lg:flex-row  bg-[url('https://www.nietbschool.ac.in/assets/images/applynow-hero-banner.jpeg')]">
 
-          <div className="h-[100vh] w-[100vh] m-6 p-16">
+          <div className="lg:h-[100vh] w-full min-h-screen lg:w-[100vh] lg:m-6 lg:p-16 m-4 p-4">
             <p className="text-white lg:text-xl mb-4 bg-gray-500 rounded-2xl w-65 p-1 pl-4">NIET BUSINESS SCHOOL</p>
-            <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight font-display ">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-tight font-display sm:grid ">
               1st Private Institute in Uttar Pradesh<br class="hidden sm:block" />
               to get <span class="text-[#FFD54F] italic ">Autonomous Status</span> by UGC
             </h1>
@@ -373,7 +373,7 @@ function App() {
           </div>
 
           {/* Testimonials */}
-          <div className="gap-10  flex flex-row justify-center mx-auto">
+          <div className="gap-10  flex flex-col justify-center mx-auto sm:flex-row">
             {testimonialsData.map((item, index) => {
               const initials = item.name
                 .split(" ")
@@ -387,6 +387,7 @@ function App() {
               relative bg-white rounded-2xl p-6
               shadow-md transition-all duration-300
               hover:-translate-y-2 hover:shadow-xl 
+              w-full sm:w-auto
             "
                 >
                   <div className="absolute top-4 right-4 text-purple-200 text-3xl">
@@ -422,14 +423,14 @@ function App() {
           {/* Study Abroad Guide */}
           <div
             className="
-        mt-16 rounded-2xl p-8
+        lg:mt-16 mt-8 rounded-2xl lg:p-8
         transition-all duration-500
         hover:shadow-2xl
       "
           >
 
             {/* NIET Image */}
-            <div className=" w-full h-full lg:h-[50vh] lg:max-w-7xl">
+            <div className=" w-full h-full lg:h-[50vh] lg:max-w-7xl ">
               <img
                 src="https://cdn.pixabay.com/photo/2024/12/28/01/27/ai-generated-9295105_640.jpg"
                 alt="NIET Campus"
@@ -456,7 +457,7 @@ function App() {
           </div>
 
           {/* Cards */}
-          <div className="grid h-105 w-full gap-6 md:grid-cols-4 items-stretch">
+          <div className="grid h-105 w-full gap-6 grid-cols-2 md:grid-cols-4 items-stretch">
             {consultingServicesData.map((item, index) => (
               <div
                 key={index}
@@ -464,7 +465,7 @@ function App() {
             group bg-white rounded-2xl shadow-md overflow-hidden
             transition-all duration-300
             hover:-translate-y-2 hover:shadow-xl
-            flex flex-col h-full
+            flex flex-col h-[40vh] lg:h-full
           "
               >
                 {/* Image */}
@@ -473,7 +474,8 @@ function App() {
                     src={item.image}
                     alt={item.title}
                     className="
-                w-full h-86 object-fit p-3 
+                w-full  object-cover p-3 
+                h-56 sm:h-56 md:h-86     
                 transition-transform duration-500
                 group-hover:scale-105 rounded-2xl
               "
@@ -481,12 +483,12 @@ function App() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 mt-10 flex flex-col ">
+                <div className="p-6 mt-4 md:mt-10 flex flex-col ">
                   <h3 className="text-lg font-semibold text-gray-900">
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 text-sm text-gray-600 leading-relaxed flex-grow">
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                     {item.description}
                   </p>
 
@@ -499,8 +501,9 @@ function App() {
         </div>
       </section>
 
-      <footer className="bg-gray-100 text-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/*Footer */}
+      <footer className="bg-gray-100 text-gray-800 ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-0 mt-35">
 
           {/* Top Section */}
           <div className="py-6 border-b border-gray-300">
