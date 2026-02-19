@@ -572,7 +572,7 @@ function App() {
 
     {/* Top Section */}
     <div className="py-6 border-b border-gray-300">
-      <div className="grid grid-cols-1 lg:grid-cols-10 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
         {/* Left Column */}
         <div className="lg:col-span-4">
