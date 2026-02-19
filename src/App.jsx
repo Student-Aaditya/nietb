@@ -90,14 +90,14 @@ function App() {
       image: "https://randomuser.me/api/portraits/men/32.jpg",
       review:
         "As a PGDM student of the 2022-2024 batch, I secured an internship at Indian Oil Corporation Limited's R&D team. Subsequently, I landed a management trainee position at Lindstrom, thanks to NIET's professional development programs and excellent infrastructure. Grateful for the academic guidance and placement support, thank you, NIET.",
-    },
-    {
-      name: "Aditya Kumar",
-      role: "Student",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
-      review:
-        "As a PGDM student of the 2022-2024 batch, I secured an internship at Indian Oil Corporation Limited's R&D team. Subsequently, I landed a management trainee position at Lindstrom, thanks to NIET's professional development programs and excellent infrastructure. Grateful for the academic guidance and placement support, thank you, NIET.",
     }
+    // {
+    //   name: "Aditya Kumar",
+    //   role: "Student",
+    //   image: "https://randomuser.me/api/portraits/men/32.jpg",
+    //   review:
+    //     "As a PGDM student of the 2022-2024 batch, I secured an internship at Indian Oil Corporation Limited's R&D team. Subsequently, I landed a management trainee position at Lindstrom, thanks to NIET's professional development programs and excellent infrastructure. Grateful for the academic guidance and placement support, thank you, NIET.",
+    // }
   ];
 
   const studyGuidePoints = [
@@ -179,11 +179,11 @@ function App() {
 
           {/* Left */}
           <div className="flex flex-col">
-            <h1 className="text-4xl font-bold text-red-600 ml-20">
+            <h1 className="text-4xl font-bold text-red-600 ">
               How to Apply ?
             </h1>
 
-            <div className="lg:w-[100vh] lg:h-[100vh] mt-4 overflow-hidden rounded-xl shadow-lg group">
+            <div className="lg:w-[100vh] lg:h-[90vh] mt-4 overflow-hidden rounded-xl shadow-lg group">
               <img
                 src="https://www.niet.co.in/assets/frontend/images/why-us-overview.webp"
                 alt="niet_image"
@@ -256,7 +256,7 @@ function App() {
             </div>
 
             {/* CTA */}
-            <div className="mt-6">
+            <div className="mt-4">
               <button
                 className="
             bg-[#D6323A] text-white px-8 py-3 rounded-lg font-semibold
@@ -401,7 +401,7 @@ function App() {
       </section>
       {/*6th section */}
       <section className="bg-gray-50 py-16 px-4">
-        <div className="max-w-8xl mx-auto">
+        <div className="max-w-7xl mx-auto">
 
           {/* Heading */}
           <div className="text-center mb-10">
@@ -411,7 +411,7 @@ function App() {
           </div>
 
           {/* Testimonials */}
-          <div className="grid gap-10 md:grid-cols-4 place-items-center mx-auto">
+          <div className="gap-10  flex flex-row justify-center mx-auto">
             {testimonialsData.map((item, index) => {
               const initials = item.name
                 .split(" ")
@@ -424,7 +424,7 @@ function App() {
                   className="
               relative bg-white rounded-2xl p-6
               shadow-md transition-all duration-300
-              hover:-translate-y-2 hover:shadow-xl
+              hover:-translate-y-2 hover:shadow-xl 
             "
                 >
                   <div className="absolute top-4 right-4 text-purple-200 text-3xl">
@@ -516,11 +516,6 @@ function App() {
             <h2 className="text-3xl md:text-5xl font-semibold text-red-600 flex flex-row justify-center">
               Excellent Placement Record
             </h2>
-            <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-              At NIET, we empower you to secure top job opportunities and build a successful career.
-              Our strong industry collaborations provide extensive exposure, paving the way for you to land your dream job.
-              Recognized for <span className="font-medium text-gray-800">"Excellence in Placements"</span>, we continue to make strides with our proud recruiters.
-            </p>
           </div>
 
           {/* Cards */}
@@ -541,7 +536,7 @@ function App() {
                     src={item.image}
                     alt={item.title}
                     className="
-                w-full h-68 object-fit
+                w-full h-86 object-fit p-3 
                 transition-transform duration-500
                 group-hover:scale-105 rounded-2xl
               "
@@ -568,128 +563,128 @@ function App() {
       </section>
 
       <footer className="bg-gray-100 text-gray-800">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    {/* Top Section */}
-    <div className="py-6 border-b border-gray-300">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Top Section */}
+          <div className="py-6 border-b border-gray-300">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-        {/* Left Column */}
-        <div className="lg:col-span-4">
-          <img
-            src="/assets/images/logo.webp"
-            alt="NIET Business School"
-            className="h-20 w-auto"
-            loading="eager"
-          />
+              {/* Left Column */}
+              <div className="lg:col-span-4">
+                <img
+                  src="/assets/images/logo.webp"
+                  alt="NIET Business School"
+                  className="h-20 w-auto"
+                  loading="eager"
+                />
 
-          <div className="space-y-3 text-sm text-gray-700 mt-3">
-            <p>
-              NIET Business School,<br />
-              Plot No. 19, Knowledge Park II,<br />
-              Greater Noida, Uttar Pradesh – 201310
-            </p>
+                <div className="space-y-3 text-sm text-gray-700 mt-3">
+                  <p>
+                    NIET Business School,<br />
+                    Plot No. 19, Knowledge Park II,<br />
+                    Greater Noida, Uttar Pradesh – 201310
+                  </p>
 
-            <div className="flex items-center gap-2">
-              <i className="fas fa-envelope text-gray-600"></i>
-              <a
-                href="mailto:admission@nietbschool.ac.in"
-                className="hover:text-[#D6323A] transition-colors"
-              >
-                admission@nietbschool.ac.in
-              </a>
-            </div>
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-envelope text-gray-600"></i>
+                    <a
+                      href="mailto:admission@nietbschool.ac.in"
+                      className="hover:text-[#D6323A] transition-colors"
+                    >
+                      admission@nietbschool.ac.in
+                    </a>
+                  </div>
 
-            <div className="flex items-center gap-2">
-              <i className="fas fa-globe text-gray-600"></i>
-              <a
-                href="https://www.nietbschool.ac.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#D6323A] transition-colors"
-              >
-                www.nietbschool.ac.in
-              </a>
-            </div>
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-globe text-gray-600"></i>
+                    <a
+                      href="https://www.nietbschool.ac.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#D6323A] transition-colors"
+                    >
+                      www.nietbschool.ac.in
+                    </a>
+                  </div>
 
-            <div className="flex items-center gap-2">
-              <i className="fas fa-phone text-gray-600"></i>
-              <div className="flex flex-col">
-                <a href="tel:+919289801606" className="hover:text-[#D6323A]">
-                  +91-9289801606
-                </a>
-                <a href="tel:+918010500700" className="hover:text-[#D6323A]">
-                  +91-8010500700
-                </a>
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-phone text-gray-600"></i>
+                    <div className="flex flex-col">
+                      <a href="tel:+919289801606" className="hover:text-[#D6323A]">
+                        +91-9289801606
+                      </a>
+                      <a href="tel:+918010500700" className="hover:text-[#D6323A]">
+                        +91-8010500700
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Links */}
+              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                <ul className="space-y-2">
+                  <li><a href="/about" className="hover:text-[#D6323A]">About Institute</a></li>
+                  <li><a href="/program" className="hover:text-[#D6323A]">Program</a></li>
+                  <li><a href="/blog" className="hover:text-[#D6323A]">Blog</a></li>
+                  <li><a href="/faculty" className="hover:text-[#D6323A]">Faculty & Mentorship</a></li>
+                  <li><a href="/student-life" className="hover:text-[#D6323A]">Student Life</a></li>
+                  <li><a href="/media" className="hover:text-[#D6323A]">News</a></li>
+                </ul>
+
+                <ul className="space-y-2">
+                  <li><a href="/events" className="hover:text-[#D6323A]">Events</a></li>
+                  <li><a href="/placement" className="hover:text-[#D6323A]">Placements</a></li>
+                  <li><a href="/contact" className="hover:text-[#D6323A]">Contact Us</a></li>
+                  <li><a href="/mandatory-disclosure" className="hover:text-[#D6323A]">Mandatory Disclosure</a></li>
+                </ul>
+
+                <ul className="space-y-2">
+                  <li><a href="/grievance-redressal" className="hover:text-[#D6323A]">Grievance Redressal</a></li>
+                  <li><a href="/nirf" className="hover:text-[#D6323A]">NIRF Rankings</a></li>
+                  <li><a href="/iaqc" className="hover:text-[#D6323A]">IQAC</a></li>
+                  <li><a href="/privacy-policy" className="hover:text-[#D6323A]">Privacy Policy</a></li>
+                </ul>
               </div>
             </div>
           </div>
+
+          {/* Bottom Bar */}
+          <div className="pt-6 pb-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-600">
+              © 2026 NIET Business School. All rights reserved.
+            </p>
+
+            <div className="flex gap-3">
+              <a
+                href="https://www.facebook.com/niet.business.school.official/"
+                className="w-10 h-10 bg-[#1877F2] rounded-full flex items-center justify-center text-white hover:scale-105 transition"
+              >
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/niet_business_school/"
+                className="w-10 h-10 bg-gradient-to-r from-[#E4405F] to-[#C13584] rounded-full flex items-center justify-center text-white hover:scale-105 transition"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/niet-bschool/"
+                className="w-10 h-10 bg-[#0077B5] rounded-full flex items-center justify-center text-white hover:scale-105 transition"
+              >
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@NIETBusinessSchool"
+                className="w-10 h-10 bg-[#FF0000] rounded-full flex items-center justify-center text-white hover:scale-105 transition"
+              >
+                <i className="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
         </div>
-
-        {/* Links */}
-        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-          <ul className="space-y-2">
-            <li><a href="/about" className="hover:text-[#D6323A]">About Institute</a></li>
-            <li><a href="/program" className="hover:text-[#D6323A]">Program</a></li>
-            <li><a href="/blog" className="hover:text-[#D6323A]">Blog</a></li>
-            <li><a href="/faculty" className="hover:text-[#D6323A]">Faculty & Mentorship</a></li>
-            <li><a href="/student-life" className="hover:text-[#D6323A]">Student Life</a></li>
-            <li><a href="/media" className="hover:text-[#D6323A]">News</a></li>
-          </ul>
-
-          <ul className="space-y-2">
-            <li><a href="/events" className="hover:text-[#D6323A]">Events</a></li>
-            <li><a href="/placement" className="hover:text-[#D6323A]">Placements</a></li>
-            <li><a href="/contact" className="hover:text-[#D6323A]">Contact Us</a></li>
-            <li><a href="/mandatory-disclosure" className="hover:text-[#D6323A]">Mandatory Disclosure</a></li>
-          </ul>
-
-          <ul className="space-y-2">
-            <li><a href="/grievance-redressal" className="hover:text-[#D6323A]">Grievance Redressal</a></li>
-            <li><a href="/nirf" className="hover:text-[#D6323A]">NIRF Rankings</a></li>
-            <li><a href="/iaqc" className="hover:text-[#D6323A]">IQAC</a></li>
-            <li><a href="/privacy-policy" className="hover:text-[#D6323A]">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    {/* Bottom Bar */}
-    <div className="pt-6 pb-4 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p className="text-sm text-gray-600">
-        © 2026 NIET Business School. All rights reserved.
-      </p>
-
-      <div className="flex gap-3">
-        <a
-          href="https://www.facebook.com/niet.business.school.official/"
-          className="w-10 h-10 bg-[#1877F2] rounded-full flex items-center justify-center text-white hover:scale-105 transition"
-        >
-          <i className="fab fa-facebook-f"></i>
-        </a>
-        <a
-          href="https://www.instagram.com/niet_business_school/"
-          className="w-10 h-10 bg-gradient-to-r from-[#E4405F] to-[#C13584] rounded-full flex items-center justify-center text-white hover:scale-105 transition"
-        >
-          <i className="fab fa-instagram"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/company/niet-bschool/"
-          className="w-10 h-10 bg-[#0077B5] rounded-full flex items-center justify-center text-white hover:scale-105 transition"
-        >
-          <i className="fab fa-linkedin-in"></i>
-        </a>
-        <a
-          href="https://www.youtube.com/@NIETBusinessSchool"
-          className="w-10 h-10 bg-[#FF0000] rounded-full flex items-center justify-center text-white hover:scale-105 transition"
-        >
-          <i className="fab fa-youtube"></i>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</footer>
+      </footer>
     </>
   )
 }
