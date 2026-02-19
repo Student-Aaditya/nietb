@@ -117,29 +117,29 @@ function App() {
       title: "Abhiranjan Kumar",
       description:
         "Cease Fire",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978",
+      video:
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     },
     {
       title: "Aditya Kumar",
       description:
         "Lindstrom",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+      video:
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     },
     {
       title: "Anshu Kumari",
       description:
         "Viraaj Ventures",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0109c71c",
+      video:
+            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
     },
     {
       title: "Nitish Kumar",
       description:
         "Axis Bank",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0109c71c",
+      video:
+            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
     }
   ];
   // const navigate=useNavigate();
@@ -461,60 +461,73 @@ function App() {
       </section>
 
       {/*7th section */}
-      <section className="bg-gray-50 py-10 pb-20 md:pb-24 lg:mb-0 mb-70">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-gray-50 py-10 pb-20 md:pb-24 ">
+  <div className="max-w-7xl mx-auto">
 
-          {/* Header */}
-          <div className="mb-14 max-w-7xl">
-            <h2 className="text-3xl md:text-5xl font-semibold text-red-600 flex flex-row justify-center">
-              Excellent Placement Record
-            </h2>
-          </div>
+    {/* Header */}
+    <div className="mb-14 max-w-7xl">
+      <h2 className="text-3xl md:text-5xl font-semibold text-red-600 flex justify-center">
+        Excellent Placement Record
+      </h2>
+    </div>
 
-          {/* Cards */}
-          <div className="grid h-105 w-full gap-6 grid-cols-2 md:grid-cols-4 items-stretch">
-            {consultingServicesData.map((item, index) => (
-              <div
-                key={index}
-                className="
+    {/* SNAP VIDEO SLIDER */}
+    <div
+      className="
+        flex gap-6
+        overflow-x-auto
+        snap-x snap-mandatory
+        scroll-smooth
+        pb-4
+        [-ms-overflow-style:none]
+        [scrollbar-width:none]
+      "
+    >
+      {consultingServicesData.map((item, index) => (
+        <div
+          key={index}
+          className="
             group bg-white rounded-2xl shadow-md overflow-hidden
             transition-all duration-300
             hover:-translate-y-2 hover:shadow-xl
-            flex flex-col h-[40vh] lg:h-full
+            flex flex-col
+            w-[85%] sm:w-[300px] md:w-[320px] lg:w-[23%]
+            snap-center shrink-0
           "
-              >
-                {/* Image */}
-                <div className="overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="
-                w-full  object-cover p-3 
-                h-56 sm:h-56 md:h-86     
+        >
+          {/* Video */}
+          <div className="overflow-hidden">
+            <video
+              src={item.video}
+              className="
+                w-full object-cover p-3
+                h-90 sm:h-56 md:h-86
                 transition-transform duration-500
                 group-hover:scale-105 rounded-2xl
               "
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="p-6 mt-4 md:mt-10 flex flex-col ">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                    {item.description}
-                  </p>
-
-
-                </div>
-              </div>
-            ))}
+              muted
+              autoPlay
+              loop
+              playsInline
+            />
           </div>
 
+          {/* Content */}
+          <div className="p-6 mt-4 md:mt-10 flex flex-col">
+            <h3 className="text-lg font-semibold text-gray-900">
+              {item.title}
+            </h3>
+
+            <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+              {item.description}
+            </p>
+          </div>
         </div>
-      </section>
+      ))}
+    </div>
+      
+  </div>
+</section>
 
       {/*Footer */}
       <footer className="bg-gray-100 text-gray-800  ">
