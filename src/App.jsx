@@ -132,14 +132,14 @@ function App() {
       description:
         "Viraaj Ventures",
       video:
-            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
     },
     {
       title: "Nitish Kumar",
       description:
         "Axis Bank",
       video:
-            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
     }
   ];
   // const navigate=useNavigate();
@@ -462,18 +462,18 @@ function App() {
 
       {/*7th section */}
       <section className="bg-gray-50 py-10 pb-20 md:pb-24 ">
-  <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
 
-    {/* Header */}
-    <div className="mb-14 max-w-7xl">
-      <h2 className="text-3xl md:text-5xl font-semibold text-red-600 flex justify-center">
-        Excellent Placement Record
-      </h2>
-    </div>
+          {/* Header */}
+          <div className="mb-14 max-w-7xl">
+            <h2 className="text-3xl md:text-5xl font-semibold text-red-600 flex justify-center">
+              Excellent Placement Record
+            </h2>
+          </div>
 
-    {/* SNAP VIDEO SLIDER */}
-    <div
-      className="
+          {/* SNAP VIDEO SLIDER */}
+          <div
+            className="
         flex gap-6
         overflow-x-auto
         snap-x snap-mandatory
@@ -482,11 +482,11 @@ function App() {
         [-ms-overflow-style:none]
         [scrollbar-width:none]
       "
-    >
-      {consultingServicesData.map((item, index) => (
-        <div
-          key={index}
-          className="
+          >
+            {consultingServicesData.map((item, index) => (
+              <div
+                key={index}
+                className="
             group bg-white rounded-2xl shadow-md overflow-hidden
             transition-all duration-300
             hover:-translate-y-2 hover:shadow-xl
@@ -494,41 +494,125 @@ function App() {
             w-[85%] sm:w-[300px] md:w-[320px] lg:w-[23%]
             snap-center shrink-0
           "
-        >
-          {/* Video */}
-          <div className="overflow-hidden">
-            <video
-              src={item.video}
-              className="
+              >
+                {/* Video */}
+                <div className="overflow-hidden">
+                  <video
+                    src={item.video}
+                    className="
                 w-full object-cover p-3
                 h-90 sm:h-56 md:h-86
                 transition-transform duration-500
                 group-hover:scale-105 rounded-2xl
               "
-              muted
-              autoPlay
-              loop
-              playsInline
-            />
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-6 mt-4 md:mt-10 flex flex-col">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Content */}
-          <div className="p-6 mt-4 md:mt-10 flex flex-col">
-            <h3 className="text-lg font-semibold text-gray-900">
-              {item.title}
-            </h3>
-
-            <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-              {item.description}
-            </p>
-          </div>
         </div>
-      ))}
-    </div>
-      
-  </div>
-</section>
+      </section>
+      {/*company  */}
+      <section className="bg-gray-50 py-12 overflow-hidden">
+        <div className="max-w-7xl mx-auto space-y-10">
 
+          {/* Heading */}
+          <div className="text-center">
+            <h2 className="text-2xl md:text-4xl font-semibold text-red-600">
+              Our Top Recruiters
+            </h2>
+          </div>
+
+          {/* Marquee Row 1 */}
+          <div className="relative overflow-hidden">
+            <div className="flex gap-8 animate-marquee">
+              {[
+                "/assets/images/company/1.png",
+                "/assets/images/company/2.png",
+                "/assets/images/company/3.png",
+                "/assets/images/company/4.png",
+                "/assets/images/company/5.png",
+              ].concat([
+                "/assets/images/company/1.png",
+                "/assets/images/company/2.png",
+                "/assets/images/company/3.png",
+                "/assets/images/company/4.png",
+                "/assets/images/company/5.png",
+              ]).map((logo, index) => (
+                <div
+                  key={index}
+                  className="shrink-0 w-40 h-20 md:w-32 md:h-16 flex items-center justify-center group"
+                >
+                  <img
+                    src={logo}
+                    alt="Company Logo"
+                    className="
+                max-h-16 md:max-h-12 w-auto object-contain
+                filter mix-blend-multiply
+                transition-transform duration-300
+                group-hover:scale-110
+              "
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Marquee Row 2 (Reverse) */}
+          <div className="relative overflow-hidden">
+            <div className="flex gap-8 animate-marquee-reverse">
+              {[
+                "/assets/images/company/6.png",
+                "/assets/images/company/7.png",
+                "/assets/images/company/8.png",
+                "/assets/images/company/9.png",
+                "/assets/images/company/10.png",
+              ].concat([
+                "/assets/images/company/6.png",
+                "/assets/images/company/7.png",
+                "/assets/images/company/8.png",
+                "/assets/images/company/9.png",
+                "/assets/images/company/10.png",
+              ]).map((logo, index) => (
+                <div
+                  key={index}
+                  className="shrink-0 w-40 h-20 md:w-32 md:h-16 flex items-center justify-center group"
+                >
+                  <img
+                    src={logo}
+                    alt="Company Logo"
+                    className="
+                max-h-16 md:max-h-12 w-auto object-contain
+                filter mix-blend-multiply
+                transition-transform duration-300
+                group-hover:scale-110
+              "
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
       {/*Footer */}
       <footer className="bg-gray-100 text-gray-800  ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
