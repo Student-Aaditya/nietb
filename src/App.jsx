@@ -460,41 +460,16 @@ function App() {
           {/* Study Abroad Guide */}
           <div
             className="
-        mt-16 bg-[#0b2c4d] rounded-2xl p-8
-        grid md:grid-cols-2 gap-8 items-center
+        mt-16 rounded-2xl p-8
         transition-all duration-500
         hover:shadow-2xl
       "
           >
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-3">
-                Study Abroad Guide
-              </h3>
-              <p className="text-gray-200 text-sm mb-6">
-                Everything you need to know before starting your international
-                education journey.
-              </p>
-
-              <ul className="space-y-3">
-                {studyGuidePoints.map((point, index) => (
-                  <li
-                    key={index}
-                    className="
-                flex items-center gap-3 text-gray-100 text-sm
-                transition-all duration-300 hover:translate-x-1
-              "
-                  >
-                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
 
             {/* NIET Image */}
-            <div className="flex justify-center overflow-hidden rounded-xl group">
+            <div className=" w-full h-full lg:h-[50vh] lg:max-w-7xl">
               <img
-                src="https://www.niet.co.in/assets/frontend/images/why-us-overview.webp"
+                src="https://cdn.pixabay.com/photo/2024/12/28/01/27/ai-generated-9295105_640.jpg"
                 alt="NIET Campus"
                 className="
             w-full h-full object-cover
