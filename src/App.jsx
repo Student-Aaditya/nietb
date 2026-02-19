@@ -138,7 +138,7 @@ function App() {
   // const navigate=useNavigate();
   return (
 
-    <>
+    <div className="lg:m-0 m-3">
       {/*Home Page Section */}
       <section className="w-full h-full ">
         <div className="relative w-full h-[55vh] sm:h-[65vh] md:h-[75vh] lg:h-[100vh] ">
@@ -175,19 +175,19 @@ function App() {
 
       {/*3rd Section */}
       <section className="bg-gray-50 py-10">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 ">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:gap-10 ">
 
           {/* Left */}
-          <div className="flex flex-col">
-            <h1 className="text-4xl font-bold text-red-600 ">
+          <div className="flex flex-col h-full">
+            <h1 className="text-3xl lg:text-4xl font-bold text-red-600 ">
               How to Apply ?
             </h1>
 
-            <div className="lg:w-[100vh] lg:h-[90vh] mt-4 overflow-hidden rounded-xl shadow-lg group">
+            <div className="lg:w-[100vh] lg:h-[90vh] w-full h-full mt-4  shadow-lg group">
               <img
                 src="https://www.niet.co.in/assets/frontend/images/why-us-overview.webp"
                 alt="niet_image"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform rounded-xl duration-700 group-hover:scale-105"
               />
             </div>
           </div>
@@ -279,10 +279,10 @@ function App() {
 
           {/* Heading */}
           <div className="mb-8 md:mb-10">
-            <p className="text-xs md:text-4xl font-semibold tracking-[0.15em] uppercase text-[#D6323A] mb-1">
+            <p className="text-lg md:text-4xl font-semibold tracking-[0.15em] uppercase text-[#D6323A] mb-1">
               Industry & Innovation
             </p>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-600 mb-1">
+            <h2 className="text-sm md:text-2xl font-bold text-gray-600 mb-1">
               Learn Inside Advanced Labs and Centres of Excellence
             </h2>
           </div>
@@ -446,7 +446,7 @@ function App() {
         </div>
       </section>
       {/*7th section */}
-      <section className="bg-gray-50 py-10">
+      <section className="bg-gray-50 py-10 pb-20 md:pb-24 lg:mb-0 mb-70">
         <div className="max-w-7xl mx-auto">
 
           {/* Header */}
@@ -502,8 +502,8 @@ function App() {
       </section>
 
       {/*Footer */}
-      <footer className="bg-gray-100 text-gray-800 ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-0 mt-35">
+      <footer className="bg-gray-100 text-gray-800  ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
 
           {/* Top Section */}
           <div className="py-6 border-b border-gray-300">
@@ -518,7 +518,7 @@ function App() {
                   loading="eager"
                 />
 
-                <div className="space-y-3 text-sm text-gray-700 mt-3">
+                <div className="space-y-3 text-[16px] lg:text-lg text-gray-700 mt-3">
                   <p>
                     NIET Business School,<br />
                     Plot No. 19, Knowledge Park II,<br />
@@ -562,7 +562,7 @@ function App() {
               </div>
 
               {/* Links */}
-              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-[14px] lg:text-lg">
                 <ul className="space-y-2">
                   <li><a href="/about" className="hover:text-[#D6323A]">About Institute</a></li>
                   <li><a href="/program" className="hover:text-[#D6323A]">Program</a></li>
@@ -625,7 +625,7 @@ function App() {
 
         </div>
       </footer>
-    </>
+    </div>
   )
 }
 
