@@ -79,6 +79,13 @@ function App() {
     },
     {
       name: "Anshu Kamari",
+      role: "Student",
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      review:
+        "Hi, I'm Nitish Kumar, a PGDM student of the 2022-2024 batch. My specialization was in marketing. I'm thankful to the faculty at NIET for teaching me crucial marketing skills. From 7P's to advanced social media strategies, their training helped secure my job at Axis Bank. The placement team on campus gave me ample opportunities that helped me secure this job.",
+    },
+    {
+      name: "Anshu Kamari",
       role: "Graduate",
       image: "https://randomuser.me/api/portraits/men/46.jpg",
       review:
@@ -362,18 +369,29 @@ function App() {
         </div>
       </section>
       {/*6th section */}
+
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-7xl mx-auto">
 
           {/* Heading */}
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-semibold text-red-600 flex flex-row justify-center">
+            <h2 className="text-3xl md:text-4xl font-semibold text-red-600 flex justify-center">
               What Our Students Say
             </h2>
           </div>
 
-          {/* Testimonials */}
-          <div className="gap-10  flex flex-col justify-center mx-auto sm:flex-row">
+          {/* Testimonials Slider */}
+          <div
+            className="
+        flex gap-6
+        overflow-x-auto
+        snap-x snap-mandatory
+        scroll-smooth
+        pb-4
+        [-ms-overflow-style:none]
+        [scrollbar-width:none]
+      "
+          >
             {testimonialsData.map((item, index) => {
               const initials = item.name
                 .split(" ")
@@ -386,10 +404,12 @@ function App() {
                   className="
               relative bg-white rounded-2xl p-6
               shadow-md transition-all duration-300
-              hover:-translate-y-2 hover:shadow-xl 
-              w-full sm:w-auto
+              hover:-translate-y-2 hover:shadow-xl
+              w-[85%] sm:w-[320px] md:w-[360px]
+              snap-center shrink-0
             "
                 >
+                  {/* Quote icon */}
                   <div className="absolute top-4 right-4 text-purple-200 text-3xl">
                     ❝
                   </div>
@@ -401,7 +421,6 @@ function App() {
                     </div>
 
                     <div>
-                      {/* Stars */}
                       <div className="flex text-yellow-400 text-sm mb-1">
                         ★★★★★
                       </div>
@@ -420,31 +439,27 @@ function App() {
             })}
           </div>
 
-          {/* Study Abroad Guide */}
+          {/* Image Section */}
           <div
             className="
-        lg:mt-16 mt-8 rounded-2xl lg:p-8
+        mt-8 lg:mt-16
+        rounded-2xl lg:p-8
         transition-all duration-500
         hover:shadow-2xl
       "
           >
-
-            {/* NIET Image */}
-            <div className=" w-full h-full lg:h-[50vh] lg:max-w-7xl ">
+            <div className="w-full h-full lg:h-[50vh] lg:max-w-7xl overflow-hidden rounded-2xl">
               <img
                 src="https://cdn.pixabay.com/photo/2024/12/28/01/27/ai-generated-9295105_640.jpg"
                 alt="NIET Campus"
-                className="
-            w-full h-full object-cover
-            transition-transform duration-700
-            group-hover:scale-110
-          "
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
             </div>
           </div>
 
         </div>
       </section>
+
       {/*7th section */}
       <section className="bg-gray-50 py-10 pb-20 md:pb-24 lg:mb-0 mb-70">
         <div className="max-w-7xl mx-auto">
