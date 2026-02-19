@@ -175,7 +175,7 @@ function App() {
 
       {/*3rd Section */}
       <section className="bg-gray-50 py-10">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 px-3">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 ">
 
           {/* Left */}
           <div className="flex flex-col">
@@ -274,88 +274,50 @@ function App() {
       </section>
 
       {/*4th section */}
-      <section className="bg-gradient-to-r from-[#f5f7fa] to-[#eef1f5] py-4 px-4">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10">
+      <section className="py-8 md:py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-0">
 
-          {/* Left Content */}
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-red-600 italic">
+          {/* Heading */}
+          <div className="mb-8 md:mb-10">
+            <p className="text-xs md:text-4xl font-semibold tracking-[0.15em] uppercase text-[#D6323A] mb-1">
               Industry & Innovation
-            </h2>
-            <p className="mt-2 text-gray-800 text-xl">
-              Learn Inside Advanced Labs and Centres of Excellence
             </p>
-
-            {/* Destination Cards */}
-            <div className="mt-8 space-y-3">
-              {destinations.map((item, index) => (
-                <div
-                  key={index}
-                  className="
-              group flex items-center gap-6 bg-white
-              shadow-md rounded-xl px-4 py-3 w-fit
-              transition-all duration-300 ease-out
-              hover:-translate-y-1 hover:scale-[1.03]
-              hover:shadow-xl hover:bg-orange-50
-            "
-                >
-                  <img
-                    src={item.flag}
-                    alt={item.country}
-                    className="
-                w-25 h-10 object-contain rounded-sm
-                transition-transform duration-300
-                group-hover:scale-110
-              "
-                  />
-                  <span
-                    className="
-                text-gray-800 font-medium
-                transition-colors duration-300
-                group-hover:text-orange-600
-              "
-                  >
-                    {item.country}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <button
-              className="
-          mt-15 bg-orange-500 hover:bg-orange-600
-          text-white px-6 py-3 rounded-lg font-medium
-          transition-all duration-300
-          hover:scale-105 hover:shadow-xl
-          focus:ring-4 focus:ring-orange-200
-        "
-            >
-              Make It Happen
-            </button>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-600 mb-1">
+              Learn Inside Advanced Labs and Centres of Excellence
+            </h2>
           </div>
 
-          {/* Right Image */}
-          <div
-            className="
-        relative w-[100vh] h-[90vh]
-        overflow-hidden rounded-xl
-        transition-all duration-500 ease-out
-        hover:shadow-2xl
-      "
-          >
-            {/* CRO Overlay */}
-            <div className="absolute inset-0 bg-black/10 opacity-0 hover:opacity-100 transition-opacity duration-500 z-10" />
-
-            <img
-              src="https://www.niet.co.in/uploads/innovation_lab/large_image/65e6b45c5b3571709618268.webp"
-              alt="Student holding globe"
-              className="
-          w-full h-full object-cover
-          transform transition-transform duration-700
-          hover:scale-110
-        "
-            />
+          {/* Labs Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {[
+              { name: "Mercedes Benz Lab", img: "/assets/images/lab/mercedes.webp" },
+              { name: "AICTE IDEA Lab", img: "/assets/images/lab/aicte.webp" },
+              { name: "PTC Centre of Excellence", img: "/assets/images/lab/ptc.webp" },
+              { name: "Mobile App Development", img: "/assets/images/lab/mobiledev.jpeg" },
+              { name: "Cisco Networking Academy", img: "/assets/images/lab/cisco.webp" },
+              { name: "Automation Lab", img: "/assets/images/lab/automation.webp" },
+              { name: "Amazon Web Services", img: "/assets/images/lab/aws.webp" },
+              { name: "Salesforce Academy", img: "/assets/images/lab/saleforce.webp" },
+              { name: "Robotics Lab", img: "/assets/images/lab/robotics.webp" },
+              { name: "Capgemini PLM Lab", img: "/assets/images/lab/capgemini.webp" },
+              { name: "Big Data Lab", img: "/assets/images/lab/big-data.webp" },
+              { name: "Product Design and Development Lab", img: "/assets/images/lab/product_desing_and_development.webp" },
+              { name: "Rapid Prototyping and Reverse Engineering Lab", img: "/assets/images/lab/rapid_prototyping.webp" },
+              { name: "Oracle Academy Workforce Development Program", img: "/assets/images/lab/oracle.webp" },
+              { name: "VMware VSphere Overview", img: "/assets/images/lab/vmware.webp" },
+              { name: "Metaverse Centre of Excellence in AR/VR", img: "/assets/images/lab/metaverse.webp" },
+              { name: "Capgemini 5G Lab", img: "/assets/images/lab/capgemini_5g.webp" },
+              { name: "Automation Anywhere & Ui Path Centre of Excellence", img: "/assets/images/lab/ui_path.jpeg" },
+            ].map((lab, index) => (
+              <div key={index} className="group">
+                <div className="flex items-center p-4 md:p-5 bg-gray-50 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 h-full group-hover:-translate-y-1">
+                  <img src={lab.img} alt={lab.name} className="w-12 h-12 object-contain mr-4" />
+                  <h6 className="text-gray-900 font-semibold text-sm md:text-base group-hover:text-[#D6323A] transition-colors">
+                    {lab.name}
+                  </h6>
+                </div>
+              </div>
+            ))}
           </div>
 
         </div>
